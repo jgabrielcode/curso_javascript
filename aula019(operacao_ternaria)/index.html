@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button{
+            width: 200px;
+            height: 100px;
+        }
+        .msg{
+            background-color: rgb(3, 140, 219);
+            height: 100px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="horaAtual()">Enviar</button>
+    <div class="msg"></div>
+    <script>
+
+        document.addEventListener('click',function horaAtual(){
+            const msg = document.querySelector('.msg')
+            const data = new Date(2019,3,20,0,0,0,0);
+           
+
+            msg.innerHTML = `${data.toDateString()}`
+            
+        })
+        horaAtual()
+    </script>
+</body>
+</html>

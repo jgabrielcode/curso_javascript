@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Datas</title>
+</head>
+<body>
+    <label for="data">Escolha uma data:</label>
+    <input type="date" id="data">
+    <p id="resultado"></p>
+
+    <script>
+        // Pegamos o input
+        const inputData = document.getElementById("data");
+        const resultado = document.getElementById("resultado");
+
+        // Quando a data muda, convertemos para Date e formatamos
+        inputData.addEventListener("change", function () {
+            let dataString = inputData.value; // Captura a string YYYY-MM-DD
+            let data = new Date(dataString); // Converte para Date
+
+            // Formata para DD/MM/YYYY
+            let dataFormatada = data;
+
+            resultado.innerText = `Data escolhida: ${dataFormatada}`;
+        });
+    </script>
+</body>
+</html>

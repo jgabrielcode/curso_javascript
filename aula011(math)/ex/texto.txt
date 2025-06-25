@@ -1,0 +1,12 @@
+let num1 = prompt('Digite um numero');
+
+window.document.body.innerHTML += `Seu numero é: ${num1} </br>` ;
+window.document.body.innerHTML += `Raiz quadrada ${Math.sqrt(num1)} </br>` ;
+
+window.document.body.innerHTML += `${num1} é interiro:${Number.isInteger(num1)} </br>` ;
+
+window.document.body.innerHTML += `È NaN:${Number.NaN(num1)}</br>` ;
+window.document.body.innerHTML += `Arredondando para baixo:${Math.floor(num1)} </br>` ;
+window.document.body.innerHTML += `Arredondando para cima:${Math.ceil(num1)} </br>` ;
+
+ window.document.body.innerHTML += `Com duas casas decimais: ${num1.toFixed(2)} </br>` ;
