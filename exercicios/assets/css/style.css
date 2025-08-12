@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    outline: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(254, 254, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 62.5%;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.365);
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:5px solid black;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 11, 59, 0.7); /* Brilho verde */
+    
+    
+}
+
+.container-box{
+    display: flex;
+    gap: 50px;
+}
+
+
+.container> h1 {
+    color: rgb(0, 0, 0);
+    margin-bottom:0px ;
+    font-size: 1rem;
+}
+.container-box>.list>h2{
+    color: rgb(0, 0, 0);
+    margin-bottom:0px ;
+    font-size: 0.7rem;
+}
+
+.container>p{
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+}
+
+.container>.timeout{
+    font-size: 3rem;
+}
+
+.container>p>a>i{
+    color: black;
+    height: 20px;
+    width: 20px;
+}
+

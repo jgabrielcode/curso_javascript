@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{margin:0px; padding: 0px; box-sizing: border-box; font-size: 62.5%; font-family: "IBM Plex Mono", serif; }
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+main >.signup_form{
+    background-color: rgb(255, 254, 254);
+    
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px black;
+
+    height: 55rem;
+    width: 60%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.signup_form>h1{
+    font-size: 6rem;
+    
+}
+.form_group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.input_group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_group>.input_group>input{
+    background-color: #e0dfdfb4;
+    width:90%;
+    font-size: 1.6rem;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.input_group> span{
+    height: 6px;
+    color: red;
+}
+#erroName{
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+.input_group>label{
+    display: none;
+}
+.input_group>p{
+    font-size: 2rem;
+}
+.radio_group{
+   
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.radio_group>label{
+    margin: 0px 20px;
+}
+.radio_group>label>input{
+    margin: 1rem;
+}
+
+#btsignup{
+    color: white;
+    background-color: black;
+    font-size: 1.6rem;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@media (max-width: 1550px){
+
+main >.signup_form{
+    height: 55rem;
+    width: 60%;
+    padding: 20px;
+
+    
+}
+    
+}
