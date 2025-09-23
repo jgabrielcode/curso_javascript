@@ -1,7 +1,7 @@
 class ValidadorCpf{
     constructor(cpf){
         this.cpf = cpf
-    }
+    } 
     validar(){
         const arrCpf = Array.from(this.cpf.replace(/\D+/g,""))
         

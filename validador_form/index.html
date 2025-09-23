@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <form class="signup_form">
+            <h1>Formulario de cadastro</h1>
+            <ul>
+                <li>Nenhum campo pode estar vazio</li>
+                <li>Usuario so podera conter letras e/ou numeros</li>
+                <li>Usuario devera ter entre 3 e 12 caracteres</li>
+                <li>Senha precisa ter entre 6 e 12 caracteres</li>
+            </ul>
+            <label for="inNome">Nome</label>
+            <input type="text" class=".campo" id="inNome" placeholder="Nome" autocomplete="off">
+            <label for="inSobre">Sobre Nome</label>
+            <input type="text" class=".campo" id="inSobre" placeholder="Sobrenome" autocomplete="off">
+            <label for="inCpf">CPF:</label>
+            <input type="text" class=".campo cpf" id="inCpf" placeholder="CPF" autocomplete="off">
+            <label for="inUser">Usuario</label>
+            <input type="text" class=".campo" id="inUser" placeholder="Usuario" autocomplete="off">
+            <label for="inPassword">Senha:</label>
+            <input type="password" class=".campo" id="inPassword" placeholder="Senha" autocomplete="off">
+            <label for="inConfirmPassword">Confirmar Senha</label>
+            <input type="password" class=".campo" id="inConfirmPassword" placeholder="Confirmação de senha" autocomplete="off">
+            <input type="submit" value="Cadastrar" id="btCadastro">
+        </form>
+        <div id="iconConfirm">
+            <h1>Cadastro feito com sucesso</h1>
+            <i id="icon" class="bi bi-check-circle-fill"></i>
+            <a id="newRegister" href="#">Voltar ao inicio</a>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

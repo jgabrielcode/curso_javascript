@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "core-js": "^3.45.1",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "name": "ex3",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  }
+
+}
+
+  
