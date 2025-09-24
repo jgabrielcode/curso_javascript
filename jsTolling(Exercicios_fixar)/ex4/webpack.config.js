@@ -1,23 +1,22 @@
 const path = require('path')
 
- module.exports = {
-    mode: 'development',
+modules.exports = {
     entry: './src/index.js',
+    mode: 'production',
     output: {
-        PATH: path.resolve(__dirname, './src/public'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname,'./public'),
+        filname: 'bundle.js'
     },
     module: {
         rules: [{
-            exclude: /node_modules/,
-            test: /\.js$/,
-            use: {
-                loader: 'babel-loader', 
-                options: { 
-                    presets: ['@babel/preset-env']
-                }
+            exclude: /node-modules/,
+            use:{
+                loader: 'babel-loader'
             }
-       } ]
-    },
-    devtool:'source-map'                                                    
- }                           
+
+        }]
+    
+    }
+    
+
+}
