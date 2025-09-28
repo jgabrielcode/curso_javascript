@@ -13,6 +13,10 @@ export function gerarSenha(){
     const tam = frm.inLength.value
     const caracteres = [] //array com todos os caracteres que o usuario selecionou
 
+    if(!num.checked && !up.checked && !low.checked && !sym.checked){
+        alert("Marque algum campo para criar a senha")
+    }
+
     if(num.checked){
         for(let i = 0; i < tam; i++){
             caracteres.push(Math.floor(Math.random() * tam));
