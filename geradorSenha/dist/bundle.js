@@ -34008,6 +34008,58 @@ try {
 }
 
 
+/***/ }),
+
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   gerarSenha: () => (/* binding */ gerarSenha)
+/* harmony export */ });
+var frm = document.querySelector("form");
+var textArea = document.querySelector(".textArea");
+var num = frm.querySelector("#inNum");
+var sym = frm.querySelector("#inSym");
+var low = frm.querySelector("#textLower");
+var up = frm.querySelector("#textUpper");
+function gerarSenha() {
+  var arr = [];
+  var tam = frm.inLength.value;
+  var caracteres = []; //array com todos os caracteres que o usuario selecionou
+
+  if (num.checked) {
+    for (var i = 0; i < tam; i++) {
+      caracteres.push(Math.floor(Math.random() * tam));
+    }
+  }
+  if (up.checked) {
+    caracteres.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  }
+  if (low.checked) {
+    caracteres.push("abcdefghijklmnopqrstuvwxyz");
+  }
+  if (sym.checked) {
+    caracteres.push("@#$%^&*()!+?/><");
+  }
+  if (tam < 8) {
+    textArea.textContent = 'Tamanho da senha deve ser igual ou maior que 8';
+    textArea.style.color = "red";
+    return;
+  } else {
+    var todos = caracteres.join("");
+    textArea.style.color = "black";
+    for (var _i = 0; _i < tam; _i++) {
+      arr.push(todos[Math.floor(Math.random() * todos.length)]);
+    }
+  }
+  textArea.textContent = arr.join("");
+}
+
 /***/ })
 
 /******/ 	});
@@ -34102,8 +34154,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.js */ "./src/app.js");
 
 
+
+var btGenerate = document.querySelector("#generate");
+btGenerate.addEventListener("click", function () {
+  return (0,_app_js__WEBPACK_IMPORTED_MODULE_2__.gerarSenha)();
+});
+var btClear = document.querySelector("#clear");
+btClear.addEventListener("click", function () {
+  return textArea.innerText = "";
+});
 })();
 
 /******/ })()

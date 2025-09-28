@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+body{ width: 100%; height: 100vh;}
+
+body main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+}
+
+main h1{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 3rem; 
+    text-align: center;
+    padding:1.2rem;
+}
+main .settings{ width: 100%; display: flex; justify-content: center; align-items: center; }
+
+ .settings form{
+    width: 80%;
+    border:3px solid black;
+    margin: 3rem;
+    padding: 3rem;
+    font-size:5rem
+}
+form #inLength{
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+form p{ font-size: 3rem;}
+
+input[type="checkbox"]{
+    appearance: none; /* remove o estilo padrão */
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: background 0.3s;      
+}
+input[type="checkbox"]:checked{
+    background-color: black;
+    color: white;
+}
+
+main .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem;
+}
+
+.buttons button{
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius:1rem;
+    cursor: pointer;
+
+     border: 3px solid black; /* já reserva espaço */
+    transition: border-color 0.3s;
+}
+
+button:hover{
+    box-shadow: 2px 2px 0px black;
+}
+
+main .generatePass{
+    width: 80%;
+    height: 200px;
+    border: 3px solid black;
+    padding: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .generatePass .textArea{
+    width: 100%;
+    height: 15rem;
+    border: 2px solid black;
+    padding: 2rem;
+    font-size: 3rem;
+}
